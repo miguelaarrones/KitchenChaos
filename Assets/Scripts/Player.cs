@@ -77,12 +77,18 @@ public class Player : MonoBehaviour
             }
             else
             {
-                SetSelectedCounter(null);
+                if (selectedCounter != null)
+                {
+                    SetSelectedCounter(null);
+                }
             }
         } 
         else
         {
-            SetSelectedCounter(null);
+            if (selectedCounter != null)
+            {
+                SetSelectedCounter(null);
+            }
         }
     }
 
