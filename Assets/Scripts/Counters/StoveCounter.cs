@@ -118,7 +118,7 @@ public class StoveCounter : BaseCounter, IHasProgress
                     player.GetKitchenObject().SetKitchenObjectParent(this);
 
                     fryingRecipeSO = GetFryingRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
-                    
+
                     state = State.Frying;
                     fryingTimer = 0f;
 
@@ -221,7 +221,7 @@ public class StoveCounter : BaseCounter, IHasProgress
     {
         foreach (BurningRecipeSO burningRecipeSO in burningRecipeSOArray)
         {
-            if (fryingRecipeSO.input == inputKitchenObjectSO)
+            if (burningRecipeSO.input == inputKitchenObjectSO)
             {
                 return burningRecipeSO;
             }
